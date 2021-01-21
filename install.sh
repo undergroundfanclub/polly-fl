@@ -63,5 +63,6 @@ mkdir ~/imgs
 mkdir ~/imgs/papes
 mkdir ~/imgs/scrots
 cp yum.jpg ~/imgs/papes
+sudo cp bspwm/contrib/freedesktop/bspwm.desktop /usr/share/xsessions
 
 echo "polly debian flavor has been installed!"
