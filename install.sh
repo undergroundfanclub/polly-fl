@@ -1,4 +1,17 @@
 #!/bin/bash
+
+# Detect OS
+# $os_version variables aren't always in use, but are kept here for convenience
+if [[ -e /etc/debian_version ]]; then
+	os="debian"
+	os_version=$(grep -oE '[0-9]+' /etc/debian_version | head -1)
+	group_name="nogroup"
+else
+	echo "This installer seems to be running on an unsupported distribution. \n
+  this script is written for Debian 10 (Buster) main"
+	exit
+fi
+
 echo "installing dependacies"
 sudo apt install -y pulseaudio xinit xorg mpv suckless-tools vim nm-tray nitrogen scrot firefox-esr wget gcc make xcb libxcb-util0-dev libxcb-ewmh-dev libxcb-randr0-dev libxcb-icccm4-dev libxcb-keysyms1-dev libxcb-xinerama0-dev libasound2-dev libxcb-xtest0-dev xdo
 
@@ -50,3 +63,5 @@ mkdir ~/imgs
 mkdir ~/imgs/papes
 mkdir ~/imgs/scrots
 cp yum.jpg ~/imgs/papes
+
+echo "polly debian flavor has been installed!"
