@@ -1,14 +1,35 @@
 #!/bin/bash
 echo "installing dependacies"
-sudo apt install -y pulseaudio xinit xorg mpv suckless-tools vim nm-tray nitrogen scrot firefox-esr
-echo "install bspwm"
-apt install -y bspwm sxhkd
+sudo apt install -y pulseaudio xinit xorg mpv suckless-tools vim nm-tray nitrogen scrot firefox-esr wget gcc make xcb libxcb-util0-dev libxcb-ewmh-dev libxcb-randr0-dev libxcb-icccm4-dev libxcb-keysyms1-dev libxcb-xinerama0-dev libasound2-dev libxcb-xtest0-dev xdo
+
+mkdir ~/.config
+
+echo "installing sddm (login menu)"
+apt install -y sddm
+
+echo "installing bspwm"
 mkdir ~/.config/bspwm
 mkdir ~/.config/sxhkd
-cp bsconf/bspwmrc~/.config/bspwm/bspwmrc
+
+git clone https://github.com/baskerville/bspwm.git
+git clone https://github.com/baskerville/sxhkd.git
+
+cd bspwm
+make
+sudo make install
+cd ..
+
+cd sxhkd
+make
+sudo make install
+cd ..
+
+cp bsconf/bspwmrc ~/.config/bspwm/bspwmrc
 chmod +x ~/.config/bspwm/bspwmrc 
 cp bsconf/sxhkdrc ~/.config/sxhkd/sxhkdrc
+
 sudo cp bspwm/contrib/freedesktop/bspwm.desktop /usr/share/xsessions
+echo "bspwm installed"
 
 echo "grabbing alacritty"
 wget https://github.com/alacritty/alacritty/releases/download/v0.4.2/Alacritty-v0.4.2-ubuntu_18_04_amd64.deb
