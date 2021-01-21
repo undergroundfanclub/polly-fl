@@ -18,4 +18,4 @@ bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 
 # autostart programs
-nitrogen --set-auto ~/imgs/papes/yum.jpg
+nitrogen --set-zoom-fill ~/imgs/papes/yum.jpg
