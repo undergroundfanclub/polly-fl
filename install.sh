@@ -18,7 +18,7 @@ sudo apt install -y pulseaudio xinit xorg mpv suckless-tools vim nm-tray nitroge
 mkdir ~/.config
 
 echo "installing sddm (login menu)"
-apt install -y sddm
+sudo apt install -y sddm
 
 echo "installing bspwm"
 mkdir ~/.config/bspwm
@@ -46,7 +46,7 @@ echo "bspwm installed"
 
 echo "grabbing alacritty"
 wget https://github.com/alacritty/alacritty/releases/download/v0.4.2/Alacritty-v0.4.2-ubuntu_18_04_amd64.deb
-apt install -y ./Alacritty-v0.4.2-ubuntu_18_04_amd64.deb
+sudo apt install -y ./Alacritty-v0.4.2-ubuntu_18_04_amd64.deb
 mkdir ~/.config/alacritty/
 cp alacritty.yml ~/.config/alacritty/alacritty.yml
 echo "alacritty installed"
