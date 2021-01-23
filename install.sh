@@ -13,29 +13,29 @@ else
 fi
 
 echo "installing dependacies"
-sudo apt install -y pulseaudio xinit xorg mpv suckless-tools vim nm-tray nitrogen scrot firefox-esr wget gcc make xcb libxcb-util0-dev libxcb-ewmh-dev libxcb-randr0-dev libxcb-icccm4-dev libxcb-keysyms1-dev libxcb-xinerama0-dev libasound2-dev libxcb-xtest0-dev xdo libxcb-shape0-dev
+sudo apt install -y pulseaudio bspwm xinit xorg slim suckless-tools vim nitrogen scrot firefox-esr wget gcc make xcb libxcb-util0-dev libxcb-ewmh-dev libxcb-randr0-dev libxcb-icccm4-dev libxcb-keysyms1-dev libxcb-xinerama0-dev libasound2-dev libxcb-xtest0-dev xdo libxcb-shape0-dev
 
 mkdir ~/.config
 
 # echo "installing sddm (login menu)"
 # sudo apt install -y sddm
 
-echo "installing bspwm"
+#echo "installing bspwm"
 mkdir ~/.config/bspwm
 mkdir ~/.config/sxhkd
 
-git clone https://github.com/baskerville/bspwm.git
-git clone https://github.com/baskerville/sxhkd.git
+#git clone https://github.com/baskerville/bspwm.git
+#git clone https://github.com/baskerville/sxhkd.git
 
-cd bspwm
-make
-sudo make install
-cd ..
+#cd bspwm
+#make
+#sudo make install
+#cd ..
 
-cd sxhkd
-make
-sudo make install
-cd ..
+#cd sxhkd
+#make
+#sudo make install
+#cd ..
 
 cp bsconf/bspwmrc ~/.config/bspwm/bspwmrc
 chmod +x ~/.config/bspwm/bspwmrc 
