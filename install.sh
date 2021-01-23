@@ -17,31 +17,13 @@ sudo apt install -y pulseaudio bspwm xinit xorg slim suckless-tools vim nitrogen
 
 mkdir ~/.config
 
-# echo "installing sddm (login menu)"
-# sudo apt install -y sddm
-
-#echo "installing bspwm"
 mkdir ~/.config/bspwm
 mkdir ~/.config/sxhkd
-
-#git clone https://github.com/baskerville/bspwm.git
-#git clone https://github.com/baskerville/sxhkd.git
-
-#cd bspwm
-#make
-#sudo make install
-#cd ..
-
-#cd sxhkd
-#make
-#sudo make install
-#cd ..
 
 cp bsconf/bspwmrc ~/.config/bspwm/bspwmrc
 chmod +x ~/.config/bspwm/bspwmrc 
 cp bsconf/sxhkdrc ~/.config/sxhkd/sxhkdrc
 
-# sudo cp bspwm/contrib/freedesktop/bspwm.desktop /usr/share/xsessions
 echo "bspwm installed"
 
 echo "grabbing alacritty"
@@ -64,4 +46,5 @@ mkdir ~/imgs/papes
 mkdir ~/imgs/scrots
 cp yum.jpg ~/imgs/papes
 
-echo "polly debian flavor has been installed!"
+echo 'polly debian flavor has been installed! \n
+please restart or "startx" at your own risk'
