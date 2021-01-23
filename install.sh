@@ -13,7 +13,7 @@ else
 fi
 
 echo "installing dependacies"
-sudo apt install -y pulseaudio bspwm xinit xorg slim suckless-tools vim nitrogen scrot firefox-esr wget gcc make xcb libxcb-util0-dev libxcb-ewmh-dev libxcb-randr0-dev libxcb-icccm4-dev libxcb-keysyms1-dev libxcb-xinerama0-dev libasound2-dev libxcb-xtest0-dev xdo libxcb-shape0-dev
+sudo apt install -y pulseaudio bspwm xinit fonts-firacode xorg slim suckless-tools vim nitrogen scrot firefox-esr wget gcc make xcb libxcb-util0-dev libxcb-ewmh-dev libxcb-randr0-dev libxcb-icccm4-dev libxcb-keysyms1-dev libxcb-xinerama0-dev libasound2-dev libxcb-xtest0-dev xdo libxcb-shape0-dev
 
 mkdir ~/.config
 
@@ -23,7 +23,6 @@ mkdir ~/.config/sxhkd
 cp bsconf/bspwmrc ~/.config/bspwm/bspwmrc
 chmod +x ~/.config/bspwm/bspwmrc 
 cp bsconf/sxhkdrc ~/.config/sxhkd/sxhkdrc
-
 echo "bspwm installed"
 
 echo "grabbing alacritty"
@@ -37,6 +36,10 @@ echo "installing vim"
 cp .vimrc ~/.vimrc
 echo "vim installed"
 
+echo 'install slim theme'
+git clone https://github.com/adi1090x/slim_themes.git
+cp slim_themes/themes /usr/share/slim/themes
+
 echo "touching up"
 sudo update-alternatives --config editor
 git config --global core.editor "vim"
@@ -45,6 +48,8 @@ mkdir ~/imgs
 mkdir ~/imgs/papes
 mkdir ~/imgs/scrots
 cp yum.jpg ~/imgs/papes
-
+cp .bashrc ~/.bashrc
+cp shellaliases ~/.config/shellaliases
+source ~/.bashrc
 echo 'polly debian flavor has been installed! \n
 please restart or "startx" at your own risk'
