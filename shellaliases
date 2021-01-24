@@ -1,3 +1,3 @@
-alias s = 'sudo'
-alias g = 'git'
-alias 
+alias s='sudo'
+alias g='git'
+alias pkgcount='sudo dpkg-query -f '${binary:Package}\n' -W | wc -l'
