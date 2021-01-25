@@ -3,5 +3,5 @@ shortcuts:
 ###########
 super + enter alacritty
 super + d dmenu_run
-super + shift q kill window
+super + w kill window
 prnt scrot
