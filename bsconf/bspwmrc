@@ -20,4 +20,5 @@ bspc rule -a Screenkey manage=off
 
 # autostart programs
 lxpanel
-nitrogen --restore
+nitrogen --set-auto ~/imgs/papes/flower.png
+conky
