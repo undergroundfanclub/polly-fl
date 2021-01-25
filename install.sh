@@ -13,8 +13,7 @@ else
 fi
 
 echo "installing dependacies"
-sudo apt install -y pulseaudio bspwm xinit conky libnotify fonts-firacode xorg slim vim nitrogen scrot firefox-esr wget gcc make xcb libxcb-util0-dev libxcb-ewmh-dev libxcb-randr0-dev libxcb-icccm4-dev libxcb-keysyms1-dev libxcb-xinerama0-dev libasound2-dev libxcb-xtest0-dev xdo libxcb-shape0-dev
-# suckless-tools
+sudo apt install -y pulseaudio pavucontrol lxpanel bspwm xinit conky libnotify fonts-firacode xorg slim vim nitrogen scrot firefox-esr wget gcc make xcb libxcb-util0-dev libxcb-ewmh-dev libxcb-randr0-dev libxcb-icccm4-dev libxcb-keysyms1-dev libxcb-xinerama0-dev libasound2-dev libxcb-xtest0-dev xdo libxcb-shape0-dev  suckless-tools
 mkdir ~/.config
 
 mkdir ~/.config/bspwm
@@ -50,6 +49,7 @@ mkdir ~/imgs/scrots
 cp sys2tile.png ~/imgs/papes
 cp .bashrc ~/.bashrc
 cp shellaliases ~/.config/shellaliases
+cp .conkyrc ~/
 source ~/.bashrc
 echo 'polly debian flavor has been installed!
 please restart or "startx" at your own risk'
