@@ -13,7 +13,9 @@ else
 fi
 
 echo "installing dependacies"
-sudo apt install -y pulseaudio pavucontrol xfce4-panel xfce4-pulseaudio-plugin bspwm xinit conky libnotify4 fonts-firacode xorg slim vim nitrogen scrot firefox-esr wget gcc make xcb libxcb-util0-dev libxcb-ewmh-dev libxcb-randr0-dev libxcb-icccm4-dev libxcb-keysyms1-dev libxcb-xinerama0-dev libasound2-dev libxcb-xtest0-dev xdo libxcb-shape0-dev  suckless-tools
+sudo apt install pulseaudio pavucontrol bspwm tint2 xinit conky libnotify4 fonts-firacode xorg
+lightdm vim feh scrot firefox-esr wget gcc make cmake cbatticon volumeicon-alsa
+network-manager-gnome suckless-tools
 mkdir ~/.config
 
 mkdir ~/.config/bspwm
@@ -25,19 +27,15 @@ cp bsconf/sxhkdrc ~/.config/sxhkd/sxhkdrc
 echo "bspwm installed"
 
 echo "grabbing alacritty"
-wget https://github.com/alacritty/alacritty/releases/download/v0.4.2/Alacritty-v0.4.2-ubuntu_18_04_amd64.deb
-sudo apt install -y ./Alacritty-v0.4.2-ubuntu_18_04_amd64.deb
-mkdir ~/.config/alacritty/
-cp alacritty.yml ~/.config/alacritty/alacritty.yml
+#wget https://github.com/alacritty/alacritty/releases/download/v0.4.2/Alacritty-v0.4.2-ubuntu_18_04_amd64.deb
+#sudo apt install -y ./Alacritty-v0.4.2-ubuntu_18_04_amd64.deb
+#mkdir ~/.config/alacritty/
+#cp alacritty.yml ~/.config/alacritty/alacritty.yml
 echo "alacritty installed"
 
 echo "installing vim"
 cp .vimrc ~/.vimrc
 echo "vim installed"
-
-echo 'install slim theme'
-git clone https://github.com/adi1090x/slim_themes.git
-cp -r slim_themes/themes /usr/share/slim/themes
 
 echo "touching up"
 sudo update-alternatives --config editor
@@ -46,7 +44,7 @@ mkdir ~/dl
 mkdir ~/imgs
 mkdir ~/imgs/papes
 mkdir ~/imgs/scrots
-cp sys2tile.png ~/imgs/papes
+cp flower.png ~/imgs/papes
 cp .bashrc ~/.bashrc
 cp shellaliases ~/.config/shellaliases
 cp .conkyrc ~/
