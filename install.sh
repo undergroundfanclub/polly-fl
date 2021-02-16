@@ -27,10 +27,10 @@ cp bsconf/sxhkdrc ~/.config/sxhkd/sxhkdrc
 echo "bspwm installed"
 
 echo "grabbing alacritty"
-#wget https://github.com/alacritty/alacritty/releases/download/v0.4.2/Alacritty-v0.4.2-ubuntu_18_04_amd64.deb
-#sudo apt install -y ./Alacritty-v0.4.2-ubuntu_18_04_amd64.deb
-#mkdir ~/.config/alacritty/
-#cp alacritty.yml ~/.config/alacritty/alacritty.yml
+wget https://github.com/alacritty/alacritty/releases/download/v0.4.2/Alacritty-v0.4.2-ubuntu_18_04_amd64.deb
+sudo apt install -y ./Alacritty-v0.4.2-ubuntu_18_04_amd64.deb
+mkdir ~/.config/alacritty/
+cp alacritty.yml ~/.config/alacritty/alacritty.yml
 echo "alacritty installed"
 
 echo "installing vim"
@@ -50,4 +50,4 @@ cp shellaliases ~/.config/shellaliases
 cp .conkyrc ~/
 source ~/.bashrc
 echo 'polly debian flavor has been installed!
-please restart or "startx" at your own risk'
+please restart'
