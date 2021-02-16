@@ -11,9 +11,13 @@ while this setup probably wont be the favorite among some, im mainly using this 
 so feel free to use it, but at this point i dont see a point in trying to adjust it for others.
 i hope you understand.
 
+# prerequisites
+all you need is to have sudo setup for you user, and git to clone the repo
+
 # how to install
 ```
 git clone https://github.com/undergroundfanclub/polly-fl.git
 cd polly-fl
 ./install.sh
 ```
+this is reccomended to be installed on the netinstall iso: with no packages selected during "package-selection"
