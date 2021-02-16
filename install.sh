@@ -47,6 +47,8 @@ mkdir ~/imgs/scrots
 cp flower.png ~/imgs/papes
 cp .bashrc ~/.bashrc
 cp shellaliases ~/.config/shellaliases
+mkdir ~/.config/tint2
+cp tint2rc ~/.config/tint2/
 cp .conkyrc ~/
 source ~/.bashrc
 echo 'polly debian flavor has been installed!
