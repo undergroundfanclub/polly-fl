@@ -1,4 +1,7 @@
 alias s='sudo'
 alias g='git'
-alias pkgcount='dpkg-query -f '${binary:Package}\n' -W | wc -l'
+alias l='ls -a'
+alias cl='clear'
+alias ..='cd ..'
+alias pkgcount='sudo dpkg-query -f '${binary:Package}\n' -W | wc -l'
 alias mpvc='mpv --player-operation-mode=pseudo-gui'
