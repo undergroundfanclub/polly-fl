@@ -12,11 +12,11 @@ so feel free to use it, but at this point i dont see a point in trying to adjust
 i hope you understand.
 
 # prerequisites
-all you need is to have sudo setup for you user, and git to clone the repo
+all you need is to have sudo and apt setup for you user, and git to clone the repo
 
 # how to install
 ```
-https://github.com/undergroundfanclub/polly-deployment
+git clone https://github.com/undergroundfanclub/polly-deployment
 cd polly-deployment
 ./install.sh
 ```
