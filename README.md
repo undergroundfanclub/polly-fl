@@ -1,4 +1,4 @@
-# pollybug-deploy (0.1.5)
+# polly-deployment (0.1.5)
 way to clone my setup to different machines
 
 welcome to my free debian flavor.
@@ -16,8 +16,8 @@ all you need is to have sudo setup for you user, and git to clone the repo
 
 # how to install
 ```
-git clone https://github.com/undergroundfanclub/polly-fl.git
-cd polly-fl
+https://github.com/undergroundfanclub/polly-deployment
+cd polly-deployment
 ./install.sh
 ```
 this is reccomended to be installed on the netinstall iso: with no packages selected during "package-selection"
