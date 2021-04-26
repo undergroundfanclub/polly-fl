@@ -26,9 +26,8 @@ else
 fi
 
 echo "installing dependacies"
-sudo apt install pulseaudio pavucontrol bspwm tint2 xinit conky libnotify4 fonts-firacode xorg
-lightdm vim feh scrot firefox-esr wget gcc make cmake cbatticon volumeicon-alsa
-network-manager-gnome suckless-tools kitty
+cat dependacies | xargs sudo apt install
+
 mkdir ~/.config
 
 mkdir ~/.config/bspwm
@@ -68,7 +67,8 @@ mkdir ~/dl
 mkdir ~/imgs
 mkdir ~/imgs/papes
 mkdir ~/imgs/scrots
-cp flower.png ~/imgs/papes
+mkdir ~/prj
+mkdir ~/tmp
 cp .bashrc ~/.bashrc
 cp shellaliases ~/.config/shellaliases
 mkdir ~/.config/tint2

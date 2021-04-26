@@ -17,9 +17,9 @@ bspc rule -a Lxappearance state=floating center=true
 bspc rule -a mpv state=floating center=true
 
 # autostart programs
+compton --vsync opengl-swc --backend glx &
 tint2 &
 nm-applet &
 volumeicon &
 cbatticon &
 feh --bg-tile ~/imgs/papes/flower.png &
-conky &
