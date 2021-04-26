@@ -12,19 +12,6 @@ else
         exit
 fi
 
-updatebackports () { echo "deb http://deb.debian.org/debian stretch-backports main" | tee -a /etc/apt/sources.list | apt-get update;}
-echo "would you like to use backports?[y/n]"
-read yon
-if ["$yon" = y]; then
-    updatebackports
-elif [ "$yon" = n ]; then
-    echo "your loss"
-else
-    echo "Not a valid answer."
-    sleep 2
-
-fi
-
 echo "installing dependacies"
 cat dependacies | xargs sudo apt install
 
@@ -47,19 +34,6 @@ echo "installing vim"
 cp .vimrc ~/.vimrc
 echo "vim installed"
 
-yesvirt () { sudo apt install qemu virt-manager; }
-novirt () { echo "will not install qemu nor virt-manager"; }
-echo "Would you like to add qemu and virt-manager(frontend)? (y/n)"
-read yesorno
-if [ "$yesorno" = y ]; then
-    yesvirt
-elif [ "$yesorno" = n ]; then
-    novirt
-else
-    echo "Not a valid answer."
-    sleep 2
-fi
-
 echo "touching up"
 sudo update-alternatives --config editor
 git config --global core.editor "vim"
@@ -75,4 +49,33 @@ mkdir ~/.config/tint2
 cp tint2rc ~/.config/tint2/
 cp .conkyrc ~/
 source ~/.bashrc
-echo 'polly debian flavor has been installed!\nplease restart'
+
+echo 'modules'
+
+updatebackports () { ./modules/updatebackports;}
+echo "would you like to use backports?[y/n]"
+read yon
+if ["$yon" = y]; then
+    updatebackports
+elif [ "$yon" = n ]; then
+    echo "your loss"
+else
+    echo "Not a valid answer."
+    sleep 2
+
+fi
+
+yesvirt () { ./modules/virt-qemu; }
+novirt () { echo "will not install qemu nor virt-manager"; }
+echo "Would you like to add qemu and virt-manager(frontend)? (y/n)"
+read yesorno
+if [ "$yesorno" = y ]; then
+    yesvirt
+elif [ "$yesorno" = n ]; then
+    novirt
+else
+    echo "Not a valid answer."
+    sleep 2
+fi
+
+echo 'polly debian flavor has been installed! please restart'

@@ -22,4 +22,4 @@ tint2 &
 nm-applet &
 volumeicon &
 cbatticon &
-feh --bg-tile ~/imgs/papes/flower.png &
+~/.fehbg &
