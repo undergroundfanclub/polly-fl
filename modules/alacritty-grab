@@ -1,0 +1,15 @@
+#!/bin/sh
+
+rustc --version | grep 'rustc' &> /dev/null
+if [ $? == 0 ]; then
+git clone https://github.com/alacritty/alacritty.git
+apt install libgl1-mesa-devi cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev python3
+cd alacritty
+cargo build --release
+
+#mkdir .config/alacritty
+#cp conf/alacritty.yml ~/.config/alacritty/
+else
+echo "rust module needs to be installed"
+exit
+fi

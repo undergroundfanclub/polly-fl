@@ -13,7 +13,7 @@ else
 fi
 
 echo "installing dependacies"
-cat dependacies | xargs sudo apt install
+cat dependacies | xargs sudo apt install -y
 
 mkdir ~/.config
 
@@ -25,10 +25,10 @@ chmod +x ~/.config/bspwm/bspwmrc
 cp bsconf/sxhkdrc ~/.config/sxhkd/sxhkdrc
 echo "bspwm installed"
 
-echo "installing kitty conf"
-mkdir ~/.config/kitty/
-cp kitty.conf ~/.config/kitty/
-echo "kitty installed"
+echo "installing alacritty"
+./alacritty-grab
+mkdir ~/.config/alacritty
+cp alacritty.yml ~/.config/alacritty/ 
 
 echo "installing vim"
 cp .vimrc ~/.vimrc
@@ -48,6 +48,7 @@ cp shellaliases ~/.config/shellaliases
 mkdir ~/.config/tint2
 cp tint2rc ~/.config/tint2/
 cp .conkyrc ~/
+cp .xinitrc ~/
 source ~/.bashrc
 
 echo 'modules'

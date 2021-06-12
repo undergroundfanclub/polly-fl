@@ -5,9 +5,7 @@ tint2
 xinit
 libnotify4 
 xorg
-lightdm
 vim
-feh
 scrot
 firefox-esr
 wget
@@ -22,4 +20,4 @@ network-manager-gnome
 suckless-tools
 kitty
 pcmanfm
-fonts-fantasque-sans/
+fonts-fantasque-sans

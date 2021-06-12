@@ -1,0 +1,4 @@
+#!/bin/sh
+wget https://launchpadlibrarian.net/482533139/alacritty_0.4.3~1591123189~19.10~b089c66_amd64.deb
+apt install -y ./alacritty_0.4.3~1591123189~19.10~b089c66_amd64.deb
+rm -f alacritty_0.4.3~1591123189~19.10~b089c66_amd64.deb

@@ -1,0 +1,4 @@
+files="$(ls modules/)"
+select filename in ${files}; do echo "selected ${filename}"; break; done
+
+#ls | sed 's/^/[ ]/'
